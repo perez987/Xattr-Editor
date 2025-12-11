@@ -1,3 +1,5 @@
+com.xattr2.settings
+
 {
 "inspectorMode" : false
 "logLevel" : "error"
