@@ -20,6 +20,6 @@ You can also use the File >> Open menu (Cmd + O), which allows you to select a f
 
 You can add, rename, delete, or modify properties of existing attributes.
 
-When removing an attribute, the user receives feedback informing them of this. E.g., removing the com.apple.quarantine attribute:
+When removing an attribute, the user receives feedback informing of this. E.g., removing the com.apple.quarantine attribute:
 
 ![App](Images/App3.png)
