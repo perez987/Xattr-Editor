@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class AttributeInspectorWindowController: NSWindowController, NSWindowDelegate {
+class AttributeInspectorWindowController: NSWindowController {
     // MARK: Properties
 
     @IBOutlet var tableView: NSTableView?
@@ -31,13 +31,10 @@ class AttributeInspectorWindowController: NSWindowController, NSWindowDelegate {
         }
     }
 
-    var closeCallback: (() -> Void)?
-
     // MARK: Overrides
 
     override func windowDidLoad() {
         super.windowDidLoad()
-        window?.delegate = self
         tableView?.reloadData()
 
         refreshButton.image = NSImage(named: NSImage.refreshTemplateName)
@@ -47,12 +44,6 @@ class AttributeInspectorWindowController: NSWindowController, NSWindowDelegate {
         attributeValueField.isAutomaticQuoteSubstitutionEnabled = false
 
         attributeValueField.showLineNumberView()
-    }
-
-    // MARK: NSWindowDelegate
-
-    func windowWillClose(_ notification: Notification) {
-        closeCallback?()
     }
 
     // MARK: Utils

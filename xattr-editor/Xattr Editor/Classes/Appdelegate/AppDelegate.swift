@@ -20,22 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         inspectorWindowControllers.append(attributeInspectorWindowController)
 
         attributeInspectorWindowController.fileURL = fileURL
-        attributeInspectorWindowController.closeCallback = { [weak self, weak attributeInspectorWindowController] in
-            guard let windowController = attributeInspectorWindowController else { return }
-            self?.handleInspectorWindowClose(windowController)
-        }
         attributeInspectorWindowController.showWindow(nil)
         openWindowController.close()
-    }
-
-    func handleInspectorWindowClose(_ windowController: NSWindowController) {
-        // Remove the closed window controller from the array
-        inspectorWindowControllers.removeAll { $0 === windowController }
-
-        // If no inspector windows are open, show the open file window
-        if inspectorWindowControllers.isEmpty {
-            openWindowController.showWindow(nil)
-        }
     }
 
     @IBAction func showOpenDialog(_: AnyObject) {
