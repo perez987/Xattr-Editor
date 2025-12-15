@@ -132,6 +132,8 @@ class AttributeInspectorWindowController: NSWindowController {
             let attributeName = attribute.name
             try url.removeAttribute(name: attributeName)
             refresh(nil)
+            tableView?.deselectAll(nil)
+			selectedAttribute = nil
 
             // Show success feedback
             let alert = NSAlert()
