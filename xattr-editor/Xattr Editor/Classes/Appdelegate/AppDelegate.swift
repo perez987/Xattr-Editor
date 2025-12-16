@@ -18,7 +18,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             AttributeInspectorWindowController(
                 windowNibName: "AttributeInspectorWindow")
         inspectorWindowControllers.append(attributeInspectorWindowController)
-
+        attributeInspectorWindowController.closeCallback = { [weak self] in
+            self?.handleInspectorWindowClose(attributeInspectorWindowController)
+        }
         attributeInspectorWindowController.fileURL = fileURL
         attributeInspectorWindowController.showWindow(nil)
         openWindowController.close()
