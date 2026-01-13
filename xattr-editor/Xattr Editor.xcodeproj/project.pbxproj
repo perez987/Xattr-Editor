@@ -11,8 +11,8 @@
 		118101C4212FEC7200B0BDEF /* LineNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118101C3212FEC7200B0BDEF /* LineNumberView.swift */; };
 		47CD50BB40FE331F673DB858 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09FEBBDB493296B625F15386 /* Localizable.strings */; };
 		A101B0121E35FFF500C432C6 /* DragDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101B0111E35FFF500C432C6 /* DragDestinationView.swift */; };
+		C032A5D02F164C7200EAC461 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C032A5CF2F164C7200EAC461 /* MainMenu.xib */; };
 		FB8A8B0D1E336D0800908B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8A8B0C1E336D0800908B25 /* Assets.xcassets */; };
-		FB8A8B101E336D0800908B25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8A8B0E1E336D0800908B25 /* MainMenu.xib */; };
 		FBC0D2CB1E34BA6100A3E79B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C11E34BA6100A3E79B /* AppDelegate.swift */; };
 		FBC0D2CC1E34BA6100A3E79B /* URL+XAttr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */; };
 		FBC0D2CD1E34BA6100A3E79B /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C51E34BA6100A3E79B /* Attribute.swift */; };
@@ -27,10 +27,10 @@
 		118101C1212FEC4200B0BDEF /* NSTextView+LineNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+LineNumber.swift"; sourceTree = "<group>"; };
 		118101C3212FEC7200B0BDEF /* LineNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNumberView.swift; sourceTree = "<group>"; };
 		A101B0111E35FFF500C432C6 /* DragDestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDestinationView.swift; sourceTree = "<group>"; };
+		C032A5CF2F164C7200EAC461 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		EC29F5F764AA19394D28F707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB8A8B071E336D0800908B25 /* Xattr Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xattr Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8A8B0C1E336D0800908B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FB8A8B0F1E336D0800908B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FB8A8B111E336D0800908B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBC0D2C11E34BA6100A3E79B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+XAttr.swift"; sourceTree = "<group>"; };
@@ -53,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C032A5CE2F164C4000EAC461 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09FEBBDB493296B625F15386 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FB8A8AFE1E336D0800908B25 = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +80,11 @@
 		FB8A8B091E336D0800908B25 /* Xattr Editor */ = {
 			isa = PBXGroup;
 			children = (
-				FBC0D2BF1E34BA6100A3E79B /* Classes */,
 				FB8A8B0C1E336D0800908B25 /* Assets.xcassets */,
-				09FEBBDB493296B625F15386 /* Localizable.strings */,
-				FB8A8B0E1E336D0800908B25 /* MainMenu.xib */,
+				FBC0D2BF1E34BA6100A3E79B /* Classes */,
 				FB8A8B111E336D0800908B25 /* Info.plist */,
+				C032A5CF2F164C7200EAC461 /* MainMenu.xib */,
+				C032A5CE2F164C4000EAC461 /* Resources */,
 			);
 			path = "Xattr Editor";
 			sourceTree = "<group>";
@@ -84,10 +92,10 @@
 		FBC0D2BF1E34BA6100A3E79B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FBC0D2D21E34BDB700A3E79B /* Views */,
 				FBC0D2C01E34BA6100A3E79B /* Appdelegate */,
 				FBC0D2C21E34BA6100A3E79B /* Extensions */,
 				FBC0D2C41E34BA6100A3E79B /* Models */,
+				FBC0D2D21E34BDB700A3E79B /* Views */,
 				FBC0D2C61E34BA6100A3E79B /* WindowControllers */,
 			);
 			path = Classes;
@@ -200,10 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC0D2CE1E34BA6100A3E79B /* AttributeInspectorWindow.xib in Resources */,
+				C032A5D02F164C7200EAC461 /* MainMenu.xib in Resources */,
 				FBC0D2D01E34BA6100A3E79B /* OpenFileWindow.xib in Resources */,
 				FB8A8B0D1E336D0800908B25 /* Assets.xcassets in Resources */,
 				47CD50BB40FE331F673DB858 /* Localizable.strings in Resources */,
-				FB8A8B101E336D0800908B25 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +265,6 @@
 				EC29F5F764AA19394D28F707 /* en */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		FB8A8B0E1E336D0800908B25 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB8A8B0F1E336D0800908B25 /* Base */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
