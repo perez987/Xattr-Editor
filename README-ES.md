@@ -28,7 +28,7 @@ Es muy fácil de usar. Al iniciar la aplicación, aparece una ventana donde pued
 
 También puedes usar el menú Archivo >> Abrir (Cmd + O), que te permite seleccionar un archivo en lugar de arrastrarlo a la ventana. En ambos casos, se abre la ventana principal con los atributos extendidos (si los hay) y sus propiedades.
 
-<img  src="Images/App2.png" width="660">
+<img  src="Images/App2-ES.png" width="660">
 
 Puedes agregar, renombrar, eliminar o modificar las propiedades de los atributos existentes.
 
