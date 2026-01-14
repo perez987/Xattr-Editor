@@ -13,7 +13,7 @@ struct XattrEditorApp: App {
 
     var body: some Scene {
         // Main drop file window - always visible
-        Window("Xattr Editor", id: "main") {
+        Window(NSLocalizedString("app_title", comment: "Application title"), id: "main") {
             OpenFileView()
                 .environmentObject(appState)
                 .frame(width: 500, height: 425)
@@ -22,7 +22,7 @@ struct XattrEditorApp: App {
         .defaultPosition(.center)
         .commands {
             CommandGroup(replacing: .newItem) {
-                Button("Open...") {
+                Button(NSLocalizedString("menu_open", comment: "Menu open command")) {
                     openFile()
                 }
                 .keyboardShortcut("o", modifiers: .command)
@@ -34,7 +34,6 @@ struct XattrEditorApp: App {
             if let windowData {
                 AttributeInspectorView(fileURL: windowData.fileURL, windowId: windowData.id)
                     .environmentObject(appState)
-                    .frame(width: 800, height: 600)
             }
         }
         .windowResizability(.contentSize)

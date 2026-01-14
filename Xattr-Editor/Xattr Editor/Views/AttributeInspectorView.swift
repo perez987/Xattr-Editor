@@ -32,7 +32,7 @@ struct AttributeInspectorView: View {
                     Button(action: refresh) {
                         Image(systemName: "arrow.clockwise")
                     }
-                    .help("Refresh")
+                    .help(NSLocalizedString("help_refresh", comment: "Refresh button help"))
 
                     Spacer()
 
@@ -41,22 +41,22 @@ struct AttributeInspectorView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
-                    .help("Add Attribute")
+                    .help(NSLocalizedString("help_add_attribute", comment: "Add attribute button help"))
 
                     Button(action: removeAttribute) {
                         Image(systemName: "minus")
                     }
                     .disabled(selectedAttribute == nil)
-                    .help("Remove Attribute")
+                    .help(NSLocalizedString("help_remove_attribute", comment: "Remove attribute button help"))
 
                     Button {
                         dismiss()
                     } label: {
                         Image(systemName: "xmark.circle")
                     }
-                    .help("Close")
+                    .help(NSLocalizedString("help_close", comment: "Close button help"))
                 }
-                .padding(8)
+                .padding(6)
                 .background(Color(nsColor: .controlBackgroundColor))
 
                 Divider()
@@ -70,7 +70,8 @@ struct AttributeInspectorView: View {
                 }
                 .listStyle(.inset)
             }
-            .frame(width: 340)
+            .frame(width: 290, height: 380)
+            .padding(.leading, 10)
 
             Divider()
 
@@ -85,19 +86,20 @@ struct AttributeInspectorView: View {
                             }
                         }
                 } else {
-                    Text("Select an attribute to view its value")
+                    Text(NSLocalizedString("select_attribute_message", comment: "Select attribute message"))
                         .foregroundColor(.secondary)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
-            .frame(width: 430)
+            .frame(width: 380, height: 389)
         }
-        .frame(width: 780, height: 500)
+        .frame(width: 690, height: 400)
+        .navigationTitle(fileURL.lastPathComponent)
         .onAppear(perform: refresh)
         .onChange(of: selectedAttribute) { _, newValue in
             attributeValue = newValue?.value ?? ""
         }
-        .alert("Add Attribute", isPresented: $showingAddAlert) {
+        .alert(NSLocalizedString("add_attribute_alert_title", comment: "Add attribute alert title"), isPresented: $showingAddAlert) {
             TextField(
                 NSLocalizedString("add_attribute_title", comment: "Add attribute dialog title"),
                 text: $newAttributeName
@@ -218,7 +220,7 @@ struct TextEditorWithLineNumbers: View {
 //            .font(.system(size: NSFont.systemFontSize, design: .monospaced))
             .font(.system(.body))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(8)
+            .padding(4)
     }
 }
 

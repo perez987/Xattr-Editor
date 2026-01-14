@@ -33,14 +33,14 @@ struct OpenFileView: View {
                         .font(.system(size: 60))
                         .foregroundColor(.gray)
 
-                    Text("Drop file here")
+                    Text(NSLocalizedString("drop_file_here", comment: "Drop file here message"))
                         .font(.title2)
                         .foregroundColor(.gray)
 
-                    Text("or")
+                    Text(NSLocalizedString("or", comment: "Or text"))
                         .foregroundColor(.gray)
 
-                    Button("Choose File") {
+                    Button(NSLocalizedString("choose_file", comment: "Choose file button")) {
                         openFileDialog()
                     }
                     .buttonStyle(.borderedProminent)
