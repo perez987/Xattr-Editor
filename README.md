@@ -48,4 +48,5 @@ Changelog oy my additions:
 - Re-show drop file window when closing attribute inspector
 - Improve README and documentation
 - Update scsreenshots
+- Add Spanish language
 - Migrate storyboard project to SwiftUI.
