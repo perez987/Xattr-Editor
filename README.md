@@ -36,7 +36,9 @@ When removing an attribute, the user receives feedback. E.g., removing the com.a
 
 ## Credits
 
-*rcsiko* is the author of the original repository [xattr-editor](https://github.com/rcsiko/xattr-editor), which hasn't been updated in 7 years. I've created my own repository based on the original, which contains the most important part of the source code, bringing it up to date:
+*rcsiko* is the author of the original repository [xattr-editor](https://github.com/rcsiko/xattr-editor), which hasn't been updated in 7 years. I've created my own repository based on the original, which contains the most important part of the source code.  
+
+Changelog oy my additions:
 
 - Add app icon in Assets.xcassets
 - Fix `swiftlint` warnings and refactor Swift code
