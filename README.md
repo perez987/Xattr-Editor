@@ -36,6 +36,8 @@ You can add, rename, delete, or modify properties of existing attributes.
 
 When removing an attribute, the user receives feedback.
 
+**Note**: first screenshot is taken on Sonoma (no Liquid Glass), second on Tahoe (Liquid Glass support).
+
 ### Liquid Glass Support
 
 The app includes Liquid Glass (translucent material) effect support for macOS 15 (Sequoia) and later, including macOS 26 (Tahoe) while maintaining full backward compatibility with macOS 14.
