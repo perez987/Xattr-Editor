@@ -39,12 +39,12 @@ struct AttributeInspectorView: View {
                     Button {
                         showingAddAlert = true
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "plus.circle")
                     }
                     .help(NSLocalizedString("help_add_attribute", comment: "Add attribute button help"))
 
                     Button(action: removeAttribute) {
-                        Image(systemName: "minus")
+                        Image(systemName: "minus.circle")
                     }
                     .disabled(selectedAttribute == nil)
                     .help(NSLocalizedString("help_remove_attribute", comment: "Remove attribute button help"))
