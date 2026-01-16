@@ -1,5 +1,9 @@
 # Xattr Editor
 
+![Platform](https://img.shields.io/badge/macOS-13+-orange.svg)
+![Xcode](https://img.shields.io/badge/Xcode-15+-blue.svg)
+![Swift](https://img.shields.io/badge/Swift-5+-lavender.svg)
+
 <img  src="Images/Appicon-64.png" width="64px">
 
 ## SwiftUI Version
