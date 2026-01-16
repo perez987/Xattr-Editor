@@ -1,6 +1,6 @@
 # Xattr Editor
 
-![Platform](https://img.shields.io/badge/macOS-13+-orange.svg)
+![Platform](https://img.shields.io/badge/macOS-14+-orange.svg)
 ![Xcode](https://img.shields.io/badge/Xcode-15+-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-5+-lavender.svg)
 
