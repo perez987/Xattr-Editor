@@ -117,19 +117,16 @@ struct AttributeInspectorView: View {
                 addAttribute()
             }
         }
-        .alert(NSLocalizedString("error_title", comment: "Error title"), isPresented: $showingError) {
-            Button(NSLocalizedString("ok", comment: "Ok button"), role: .cancel) {}
-        } message: {
-            Text(errorMessage)
-        }
         .alert(
             NSLocalizedString("attribute_removed_title", comment: "Attribute removed title"),
             isPresented: $showingRemoveAlert
-        ) {
-            Button(NSLocalizedString("ok", comment: "Ok button"), role: .cancel) {}
-        } message: {
-            Text(removeMessage)
-        }
+          ) {
+              Button(NSLocalizedString("ok", comment: "Ok button"), role: .cancel) {}
+                  .keyboardShortcut(.defaultAction)
+          } message: {
+              Text(removeMessage)
+          }
+
     }
 
     private func refresh() {
