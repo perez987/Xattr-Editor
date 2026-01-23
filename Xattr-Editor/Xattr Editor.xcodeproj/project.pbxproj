@@ -23,6 +23,9 @@
 		AA0000021E34BA6100A3E79A /* AttributeInspectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeInspectorView.swift; sourceTree = "<group>"; };
 		D95039F32F184BAD0086B703 /* Material+LiquidGlass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Material+LiquidGlass.swift"; sourceTree = "<group>"; };
 		D95DB6522F18188400472969 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D9A85C042F241DAA00BA690E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D9A85C052F241DB600BA690E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D9A85C062F241DCC00BA690E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC29F5F764AA19394D28F707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB8A8B071E336D0800908B25 /* Xattr Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xattr Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8A8B0C1E336D0800908B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +154,9 @@
 				en,
 				Base,
 				es,
+				fr,
+				de,
+				it,
 			);
 			mainGroup = FB8A8AFE1E336D0800908B25;
 			productRefGroup = FB8A8B081E336D0800908B25 /* Products */;
@@ -218,6 +224,9 @@
 			children = (
 				EC29F5F764AA19394D28F707 /* en */,
 				D95DB6522F18188400472969 /* es */,
+				D9A85C042F241DAA00BA690E /* fr */,
+				D9A85C052F241DB600BA690E /* de */,
+				D9A85C062F241DCC00BA690E /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
