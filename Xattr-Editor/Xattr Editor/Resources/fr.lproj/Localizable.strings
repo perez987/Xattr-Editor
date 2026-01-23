@@ -2,37 +2,37 @@
   Localizable.strings
   Xattr Editor
 
-  English localization
+  French localization
 */
 
 /* Error messages */
-"error_code" = "Error code: %d";
-"error_title" = "Error";
+"error_code" = "Code d'erreur : %d";
+"error_title" = "Erreur";
 
 /* Add attribute dialog */
-"add_attribute_title" = "Extended attribute name:";
-"add_attribute_alert_title" = "Add Attribute";
+"add_attribute_title" = "Nom de l'attribut étendu :";
+"add_attribute_alert_title" = "Ajouter un attribut";
 "ok" = "OK";
-"cancel" = "Cancel";
+"cancel" = "Annuler";
 
 /* Success messages */
-"attribute_removed_title" = "Attribute Removed";
-"attribute_removed_message" = "The attribute '%@' has been successfully removed.";
+"attribute_removed_title" = "Attribut supprimé";
+"attribute_removed_message" = "L'attribut '%@' a été supprimé avec succès.";
 
 /* Button help texts */
-"help_refresh" = "Refresh";
-"help_add_attribute" = "Add Attribute";
-"help_remove_attribute" = "Remove Attribute";
-"help_close" = "Close";
+"help_refresh" = "Actualiser";
+"help_add_attribute" = "Ajouter un attribut";
+"help_remove_attribute" = "Supprimer un attribut";
+"help_close" = "Fermer";
 
 /* Attribute editor texts */
-"select_attribute_message" = "Select an attribute to view its value";
+"select_attribute_message" = "Sélectionnez un attribut pour voir sa valeur";
 
 /* Open file view texts */
-"drop_file_here" = "Drop file here";
-"or" = "or";
-"choose_file" = "Choose File";
+"drop_file_here" = "Déposer le fichier ici";
+"or" = "ou";
+"choose_file" = "Choisir un fichier";
 
 /* Application and menu texts */
 "app_title" = "Xattr Editor";
-"menu_open" = "Open...";
+"menu_open" = "Ouvrir...";

@@ -2,37 +2,37 @@
   Localizable.strings
   Xattr Editor
 
-  English localization
+  German localization
 */
 
 /* Error messages */
-"error_code" = "Error code: %d";
-"error_title" = "Error";
+"error_code" = "Fehlercode: %d";
+"error_title" = "Fehler";
 
 /* Add attribute dialog */
-"add_attribute_title" = "Extended attribute name:";
-"add_attribute_alert_title" = "Add Attribute";
+"add_attribute_title" = "Name des erweiterten Attributs:";
+"add_attribute_alert_title" = "Attribut hinzufügen";
 "ok" = "OK";
-"cancel" = "Cancel";
+"cancel" = "Abbrechen";
 
 /* Success messages */
-"attribute_removed_title" = "Attribute Removed";
-"attribute_removed_message" = "The attribute '%@' has been successfully removed.";
+"attribute_removed_title" = "Attribut entfernt";
+"attribute_removed_message" = "Das Attribut '%@' wurde erfolgreich entfernt.";
 
 /* Button help texts */
-"help_refresh" = "Refresh";
-"help_add_attribute" = "Add Attribute";
-"help_remove_attribute" = "Remove Attribute";
-"help_close" = "Close";
+"help_refresh" = "Aktualisieren";
+"help_add_attribute" = "Attribut hinzufügen";
+"help_remove_attribute" = "Attribut entfernen";
+"help_close" = "Schließen";
 
 /* Attribute editor texts */
-"select_attribute_message" = "Select an attribute to view its value";
+"select_attribute_message" = "Wählen Sie ein Attribut aus, um seinen Wert anzuzeigen";
 
 /* Open file view texts */
-"drop_file_here" = "Drop file here";
-"or" = "or";
-"choose_file" = "Choose File";
+"drop_file_here" = "Datei hier ablegen";
+"or" = "oder";
+"choose_file" = "Datei auswählen";
 
 /* Application and menu texts */
 "app_title" = "Xattr Editor";
-"menu_open" = "Open...";
+"menu_open" = "Öffnen...";
