@@ -48,6 +48,10 @@ When removing an attribute, the user receives feedback.
 
 The app includes Liquid Glass (translucent material) effect support for macOS 15 (Sequoia) and later, including macOS 26 (Tahoe) while maintaining full backward compatibility with macOS 14.
 
+### Language selector
+
+![Languages](Images/Language.png)
+
 ## Credits
 
 *rcsiko* is the author of the original repository [xattr-editor](https://github.com/rcsiko/xattr-editor), which hasn't been updated in 7 years. I've created my own repository based on the original, which contains the most important part of the source code.  
@@ -56,12 +60,13 @@ Changelog oy my additions:
 
 - Add app icon in Assets.xcassets
 - Fix `swiftlint` warnings and refactor Swift code
+- Migrate storyboard project to SwiftUI
 - Add user feedback (alert) for attribute removal
 - Fix error warning in attribute renaming
 - Clear the attribute value field when deleting attributes
 - Re-show drop file window when closing attribute inspector
 - Improve README and documentation
-- Update scsreenshots
-- Add Spanish language
-- Migrate storyboard project to SwiftUI
+- Update screenshots
+- Add language support: German, English, Spanish, French and Italian  (default to English)
+- Added language selector
 - Add Liquid Glass support for macOS 15+ with backward compatibility for macOS 14.
