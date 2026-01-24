@@ -36,3 +36,11 @@
 /* Application and menu texts */
 "app_title" = "Xattr Editor";
 "menu_open" = "Abrir...";
+"menu_language" = "Idioma";
+"menu_select_language" = "Seleccionar idioma...";
+
+/* Language selector */
+"language_selector_title" = "Seleccionar idioma";
+"accept" = "Aceptar";
+"language_changed_title" = "Idioma cambiado";
+"language_changed_message" = "Por favor, reinicia la aplicación para aplicar el nuevo idioma.";

@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct XattrEditorApp: App {
     @StateObject private var appState = AppState()
+    @State private var isLanguageSelectorPresented = false
 
     var body: some Scene {
         // Main drop file window - always visible
@@ -18,10 +19,21 @@ struct XattrEditorApp: App {
                 .environmentObject(appState)
                 .frame(width: 500, height: 425)
                 .windowLiquidGlass()
+                .sheet(isPresented: $isLanguageSelectorPresented) {
+                    LanguageSelectorView()
+                }
         }
         .windowResizability(.contentSize)
         .defaultPosition(.center)
         .commands {
+            // Language menu before File menu
+            CommandMenu(NSLocalizedString("menu_language", comment: "Language menu")) {
+                Button(NSLocalizedString("menu_select_language", comment: "Select Language menu item")) {
+                    isLanguageSelectorPresented = true
+                }
+                .keyboardShortcut("l", modifiers: .command)
+            }
+
             CommandGroup(replacing: .newItem) {
                 Button(NSLocalizedString("menu_open", comment: "Menu open command")) {
                     openFile()
