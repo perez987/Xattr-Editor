@@ -77,7 +77,7 @@
 				FB8A8B0C1E336D0800908B25 /* Assets.xcassets */,
 				FBC0D2C21E34BA6100A3E79B /* Extensions */,
 				FB8A8B111E336D0800908B25 /* Info.plist */,
-				FBC0D2C41E34BA6100A3E79B /* Models */,
+				FBC0D2C41E34BA6100A3E79B /* Model */,
 				C032A5CE2F164C4000EAC461 /* Resources */,
 				FBC0D2D21E34BDB700A3E79B /* Views */,
 				AA0000001E34BA6100A3E79B /* XattrEditorApp.swift */,
@@ -89,17 +89,17 @@
 			isa = PBXGroup;
 			children = (
 				FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */,
-				D95039F32F184BAD0086B703 /* Material+LiquidGlass.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FBC0D2C41E34BA6100A3E79B /* Models */ = {
+		FBC0D2C41E34BA6100A3E79B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				FBC0D2C51E34BA6100A3E79B /* Attribute.swift */,
+				D95039F32F184BAD0086B703 /* Material+LiquidGlass.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FBC0D2D21E34BDB700A3E79B /* Views */ = {
