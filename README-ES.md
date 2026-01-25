@@ -5,7 +5,7 @@
 ![Swift](https://img.shields.io/badge/Swift-5+-lavender.svg)
 
 <a href="README.md">
-    <img src="https://img.shields.io/badge/English-README-blue" alt=“English README Docs”>
+    <img src="https://img.shields.io/badge/English-README-blue" alt=“English README”>
 </a><br><br>
 
 <img src="Images/Appicon-64.png" width="64px">
