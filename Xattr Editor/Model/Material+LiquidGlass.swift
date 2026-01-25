@@ -47,11 +47,11 @@ struct AdaptiveMaterialBackground: ViewModifier {
     }
 }
 
-/// Window-level Liquid Glass effect using containerBackground
+/// Window-level Liquid Glass effect using background
 struct WindowLiquidGlassEffect: ViewModifier {
     func body(content: Content) -> some View {
         if #available(macOS 15.0, *) {
-            content.containerBackground(Material.liquidGlass, for: .window)
+            content.background(Material.liquidGlass)
         } else {
             content
         }
