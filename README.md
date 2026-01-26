@@ -33,28 +33,22 @@ It's really simple to use. When you start the app, a window appears where you ca
 | Drop file window | 
 |:----|
 | ![Drop window no Liquid Glass](Images/App1-14.png) |
-| ![Drop window Liquid Glass](Images/App1.png) |
 
 You can also use the File >> Open menu (Cmd + O), which allows you to select a file instead of dragging it onto the window. Either way, the main window opens with the extended attribute(s) (if any) and their properties.
 
 | Attributes window | 
 |:----|
 | ![Attributes window no Liquid Glass](Images/App2-14.png) |
-| ![Attributes window Liquid Glass](Images/App2.png) |
 
 You can add, rename, delete, or modify properties of existing attributes.
 
 When removing an attribute, the user receives feedback.
 
-**Note**: first screenshot is taken on Sonoma (no Liquid Glass), second on Tahoe (Liquid Glass support).
-
-### Liquid Glass Support
-
-The app includes Liquid Glass (translucent material) effect support for macOS 15 (Sequoia) and later, including macOS 26 (Tahoe) while maintaining full backward compatibility with macOS 14.
-
 ### Language selector
 
-![Languages](Images/Language.png)
+| Languages list | 
+|:----|
+| ![Languages](Images/Language.png) |
 
 ## Credits
 

@@ -35,16 +35,12 @@ Es muy fácil de usar. Al iniciar la aplicación, aparece una ventana donde pued
 | Ventana Arrastrar y Soltar | 
 |:----|
 | ![Drop window no Liquid Glass](Images/App1-ES-14.png) |
-| ![Drop window Liquid Glass](Images/App1-ES.png) |
 
 También puedes usar el menú Archivo >> Abrir (Cmd + O), que te permite seleccionar un archivo en lugar de arrastrarlo a la ventana. En ambos casos, se abre la ventana principal con los atributos extendidos (si los hay) y sus propiedades.
 
 | Ventana Atributos | 
 |:----|
 | ![Attributes window no Liquid Glass](Images/App2-ES-14.png) |
-| ![Attributes window Liquid Glass](Images/App2-ES.png) |
-
-**Nota**: primera imagen en Sonoma (sin Liquid Glass), segunda en Tahoe (soporte para Liquid Glass).
 
 Puedes agregar, renombrar, eliminar o modificar las propiedades de los atributos existentes.
 
@@ -56,7 +52,9 @@ La app es compatible con el efecto Liquid Glass (material translúcido) para mac
 
 ### Language selector
 
-![Languages](Images/Language-ES.png)
+| Lista de idiomas | 
+|:----|
+| ![Idiomas](Images/Language-ES.png) |
 
 ## Créditos
 
