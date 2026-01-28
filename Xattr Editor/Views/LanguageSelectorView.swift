@@ -85,7 +85,7 @@ struct LanguageSelectorView: View {
             .padding(.bottom)
         }
         .padding()
-        .frame(width: 350)
+        .frame(width: 280)
         .alert(
             NSLocalizedString("language_changed_title", comment: "Language changed alert title"),
             isPresented: $showRestartAlert
