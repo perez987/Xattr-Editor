@@ -52,7 +52,7 @@ When removing an attribute, the user receives feedback.
 
 ## Credits
 
-*rcsiko* is the author of the original repository [xattr-editor](https://github.com/rcsiko/xattr-editor), which hasn't been updated in 7 years. I've created my own repository based on the original, which contains the most important part of the source code.  
+*rcsiko* is the author of the original repository [xattr-editor](https://github.com/rcsiko/xattr-editor), which hasn't been updated in 7 years. I've created this fork based on the original, which contains the most important part of the source code.  
 
 Changelog oy my additions:
 
