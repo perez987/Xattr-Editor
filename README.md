@@ -32,13 +32,13 @@ It's really simple to use. When you start the app, a window appears where you ca
 
 | Drop file window | 
 |:----|
-| ![Drop window no Liquid Glass](Images/App1-14.png) |
+| ![Drop window no Liquid Glass](Images/Window1.png) |
 
 You can also use the File >> Open menu (Cmd + O), which allows you to select a file instead of dragging it onto the window. Either way, the main window opens with the extended attribute(s) (if any) and their properties.
 
 | Attributes window | 
 |:----|
-| ![Attributes window no Liquid Glass](Images/App2-14.png) |
+| ![Attributes window no Liquid Glass](Images/Window2.png) |
 
 You can add, rename, delete, or modify properties of existing attributes.
 
