@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/Spanish-README-blue" alt=“Spanish README”>
 </a><br><br>
 
-<img  src="Images/Appicon-64.png" width="64px">
+<img src="Images/Appicon-64.png" width="64px">
 
 ## SwiftUI Version
 
