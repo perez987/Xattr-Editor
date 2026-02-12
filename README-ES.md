@@ -8,13 +8,41 @@
     <img src="https://img.shields.io/badge/English-README-blue" alt=“English README”>
 </a><br><br>
 
-<img src="Images/Appicon-64.png" width="64px">
+Este proyecto es una ampliación de [Xattr-remove](https://github.com/perez987/Xattr-remove). Estas son las diferencias entre ambos proyectos:
+
+- **Xattr-remove**
+  - simple y ligera
+  - enfocada en una sola tarea (quitar com.apple.quarantine de archivos descargados de Internet)
+  - mínima intervención del usuario (la app se cierra automáticamente 3” después de realizar la tarea con éxito)
+- **Xattr Editor**
+  - es más compleja aunque el tamaño final de ambas aplicaciones se diferencia en 0,5 MB solamente
+  - funciones de edición de atributos extendidos (ver, modificar, quitar o añadir atributos)
+
+## Créditos
+
+*rcsiko* es el autor del repositorio original [xattr-editor](https://github.com/rcsiko/xattr-editor), que no se ha actualizado en 7 años. He creado mi propio repositorio basado en el original, que contiene la parte más importante del código fuente.
+
+Registro de cambios realizados en mi repositorio:
+
+- Añadir icono de la aplicación en Assets.xcassets
+- Corregir las advertencias de `swiftlint` y refactorizar el código Swift
+- Migrar el proyecto de storyboard a SwiftUI
+- Añadir aviso al usuario (alerta) en la eliminación de atributos
+- Corregir la advertencia de error al renombrar atributos
+- Borrar el campo de valor del atributo al eliminar atributos
+- Volver a mostrar la ventana de soltar archivo al cerrar el inspector de atributos
+- Mejorar el archivo README y la documentación
+- Actualizar las capturas de pantalla
+- Añadir el idioma español
+- Añadir soporte para idiomas: Alemán, Inglés, Español, Francés e Italiano  (predeterminado Inglés)
+- Añadir selector de idioma
+- Añadir soporte para Liquid Glass en macOS 15+ manteniendo compatibilidad hacia atrás con macOS 14.
 
 ## Versión SwiftUI
 
-Este proyecto ha sido migrado desde XIB storyboard a SwiftUI, adoptando el marco de trabajo moderno para interfaces de usuario en macOS, con soporte para efecto Liquid Glass en macOS 15+. 
+El repositorio original está basado en XIB storyboard pero ha sido migrado a SwiftUI, adoptando el marco de trabajo moderno para interfaces de usuario en macOS, con soporte para efecto Liquid Glass en macOS 15+. 
 
-La app ahora requiere:
+La app requiere:
 
 - **Xcode 15** o superior
 - **macOS 14.0** o superior
@@ -56,22 +84,3 @@ La app es compatible con el efecto Liquid Glass (material translúcido) para mac
 |:----|
 | ![Idiomas](Images/Language-ES.png) |
 
-## Créditos
-
-*rcsiko* es el autor del repositorio original [xattr-editor](https://github.com/rcsiko/xattr-editor), que no se ha actualizado en 7 años. He creado mi propio repositorio basado en el original, que contiene la parte más importante del código fuente.
-
-Registro de cambios realizados en mi repositorio:
-
-- Añadir icono de la aplicación en Assets.xcassets
-- Corregir las advertencias de `swiftlint` y refactorizar el código Swift
-- Migrar el proyecto de storyboard a SwiftUI
-- Añadir aviso al usuario (alerta) en la eliminación de atributos
-- Corregir la advertencia de error al renombrar atributos
-- Borrar el campo de valor del atributo al eliminar atributos
-- Volver a mostrar la ventana de soltar archivo al cerrar el inspector de atributos
-- Mejorar el archivo README y la documentación
-- Actualizar las capturas de pantalla
-- Añadir el idioma español
-- Añadir soporte para idiomas: Alemán, Inglés, Español, Francés e Italiano  (predeterminado Inglés)
-- Añadir selector de idioma
-- Añadir soporte para Liquid Glass en macOS 15+ manteniendo compatibilidad hacia atrás con macOS 14.
