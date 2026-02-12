@@ -35,7 +35,7 @@ Changelog oy my additions:
 - Update screenshots
 - Add language support: German, English, Spanish, French and Italian  (default to English)
 - Added language selector
-- Add Liquid Glass support for macOS 15+ with backward compatibility for macOS 14.
+- Add soft Liquid Glass support.
 
 ## SwiftUI Version
 
@@ -76,22 +76,3 @@ When removing an attribute, the user receives feedback.
 | Languages list | 
 |:----|
 | ![Languages](Images/Language.png) |
-
-## Credits
-
-*rcsiko* is the author of the original repository [xattr-editor](https://github.com/rcsiko/xattr-editor), which hasn't been updated in 7 years. I've created this fork based on the original, which contains the most important part of the source code.  
-
-Changelog oy my additions:
-
-- Add app icon in Assets.xcassets
-- Fix `swiftlint` warnings and refactor Swift code
-- Migrate storyboard project to SwiftUI
-- Add user feedback (alert) for attribute removal
-- Fix error warning in attribute renaming
-- Clear the attribute value field when deleting attributes
-- Re-show drop file window when closing attribute inspector
-- Improve README and documentation
-- Update screenshots
-- Add language support: German, English, Spanish, French and Italian  (default to English)
-- Added language selector
-- Add Liquid Glass support for macOS 15+ with backward compatibility for macOS 14.

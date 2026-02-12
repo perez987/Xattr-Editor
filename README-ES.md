@@ -74,10 +74,6 @@ Puedes agregar, renombrar, eliminar o modificar las propiedades de los atributos
 
 Al eliminar un atributo, el usuario recibe una notificación. 
 
-### Compatibilidad con Liquid Glass
-
-La app es compatible con el efecto Liquid Glass (material translúcido) para macOS 15 (Sequoia) y versiones posteriores, incluyendo macOS 26 (Tahoe), manteniendo al mismo tiempo la retrocompatibilidad total con macOS 14.
-
 ### Language selector
 
 | Lista de idiomas | 
