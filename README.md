@@ -18,7 +18,7 @@ This project is an expansion of [Xattr-remove](https://github.com/perez987/Xattr
    - More complex, although the final size of both applications differs by only 0.5 MB
    - Extended attribute editing functions (view, modify, remove, or add attributes)
 
-## Crédits
+## Credits
 
 *rcsiko* is the author of the original repository [xattr-editor](https://github.com/rcsiko/xattr-editor), which hasn't been updated in 7 years. I've created this fork based on the original, which contains the most important part of the source code.  
 
