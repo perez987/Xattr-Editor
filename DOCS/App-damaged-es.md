@@ -9,7 +9,7 @@ En versiones anteriores a Sequoia, la advertencia de Gatekeeper para archivos de
 Pero en Sequoia y Tahoe, la advertencia es más seria y puede asustar al usuario. Puede mostrar este mensaje:
 <br>`La aplicación está dañada y no se puede abrir.`<br>
 O este otro:
-<br>`No se ha podido verificar que Download Full Installer no contenga software malicioso.`<br>
+<br>`No se ha podido verificar que Mi-app no contenga software malicioso.`<br>
 Con la recomendación en ambos casos de trasladar el archivo a la Papelera.
 
 Esta es la advertencia que aparece cuando la aplicación no está firmada digitalmente ni notarizada por Apple, en cuyo caso la advertencia es más benigna, similar a las versiones anteriores a Sequoia.
@@ -26,7 +26,7 @@ Los usuarios que tengan Gatekeeper desactivado no verán esta advertencia. Sin e
 
 ## Desactivar Gatekeeper (NO RECOMENDADO)
 
-1. Abre la aplicación Terminal en tu Mac y ejecuta el siguiente comando: `sudo spctl —master-disable`<br>
+1. Abre la aplicación Terminal y ejecuta el siguiente comando: `sudo spctl —master-disable`<br>
 Nota: en versiones recientes de macOS, el argumento `—master-disable` se ha cambiado a `—global-disable`
 2.  Ve a "Configuración del Sistema"->"Privacidad y Seguridad"->"Seguridad" -> Permitir aplicaciones de "Cualquier lugar"
 3. Ambos argumentos pueden revertir esto y habilitar Gatekeeper nuevamente:  `sudo spctl —master-enable`  `sudo spctl —global-enable`
@@ -47,25 +47,31 @@ Al hacer clic en "Abrir de todas formas", macOS volverá a preguntar si desea ab
 - `xattr` sin argumentos muestra los atributos extendidos:
 
 ```
-> sudo xattr /Applications/My-app.app
+> sudo xattr /Applications/Mi-app.app
 > com.apple.quarantine
 ```
 
 - `xattr -cr` elimina todos los atributos extendidos:
 
-`> sudo xattr -cr /Applications/My-app.app`
+`> sudo xattr -cr /Applications/Mi-app.app`
 
 - Después de este comando, `xattr` ya no muestra el atributo extendido `com.apple.quarantine`:
 
 ```
-> sudo xattr /Applications/My-app.app 
+> sudo xattr /Applications/Mi-app.app 
 > (sin salida)
 ```
 
-## Editor Xattr
+## Xattr-remove
 
-El Editor Xattr es una sencilla aplicación GUI para ver/editar atributos extendidos de archivos en macOS. Cuenta con su propio [**repositorio**](https://github.com/perez987/Xattr-Editor).
+Aplicación SwiftUI para macOS que elimina el atributo extendido `com.apple.quarantine` de los archivos descargados de Internet. Funciona arrastrando y soltando archivos en la ventana de la aplicación. Tiene su propio repositorio: [Xattr-remove](https://github.com/perez987/Xattr-remove).
+
+Esta aplicación es una versión más sencilla y ligera de Xattr Editor. En lugar de mostrar y editar (eliminar, modificar y añadir) atributos extendidos, realiza una única tarea: eliminar `com.apple.quarantine` rápidamente de los archivos descargados de internet para que puedan abrirse en macOS sin las advertencias de Gatekeeper.
+
+## Xattr Editor
+
+El Editor Xattr es una sencilla aplicación GUI para ver/editar atributos extendidos de archivos en macOS. Este proyecto es una ampliación de Xattr-remove. Cuenta con su propio [**repositorio**](https://github.com/perez987/Xattr-Editor).
 
 ## Resultado
 
-En cualquier caso, ya sea por Ajustes del Sistema, Editor Xattr o `xattr`, a partir de este momento la aplicación descargada se ejecutará sin avisos de seguridad, ya que se ha eliminado el atributo `com.apple.quarantine`.
+En cualquier caso, ya sea por Ajustes del Sistema, Xattr-remove, Editor Xattr o `xattr`, a partir de este momento la aplicación descargada se ejecutará sin avisos de seguridad, ya que se ha eliminado el atributo `com.apple.quarantine`.
