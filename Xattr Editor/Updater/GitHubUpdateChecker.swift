@@ -58,44 +58,59 @@ final class GitHubUpdateChecker {
         performRequest(url: url, userInitiated: userInitiated) { [weak self] json in
             guard let self else { return }
             guard let tag = json["tag_name"] as? String else {
-                if userInitiated { self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: "")) }
+                if userInitiated {
+                    self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: ""))
+                }
                 return
             }
             let latestVersion = self.normalizedVersion(tag)
-            self.compareAndNotify(latestVersion: latestVersion, currentVersion: currentVersion, userInitiated: userInitiated)
+            self.compareAndNotify(
+                latestVersion: latestVersion, currentVersion: currentVersion, userInitiated: userInitiated
+            )
         }
     }
 
     // Fetches /releases (all releases) and finds the newest one whose tag starts with the given prefix.
-    private func fetchAllReleasesAndFindLatestWithPrefix(_ prefix: String, currentVersion: String, userInitiated: Bool) {
+    private func fetchAllReleasesAndFindLatestWithPrefix(
+        _ prefix: String, currentVersion: String, userInitiated: Bool
+    ) {
         guard let url = URL(string: releasesAPIURL) else { return }
         performRequest(url: url, userInitiated: userInitiated) { [weak self] json in
             guard let self else { return }
             // The releases endpoint returns an array
             guard let releases = json["_array"] as? [[String: Any]] else {
-                if userInitiated { self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: "")) }
-                return
-            }
-            // Find the newest non-prerelease tag that starts with the required major prefix
-            var bestVersion: String? = nil
-            for release in releases {
-                guard let tag = release["tag_name"] as? String else { continue }
-                let ver = self.normalizedVersion(tag)
-                guard ver.hasPrefix(prefix + ".") || ver == prefix else { continue }
-                let isDraft = release["draft"] as? Bool ?? false
-                let isPrerelease = release["prerelease"] as? Bool ?? false
-                guard !isDraft && !isPrerelease else { continue }
-                if bestVersion == nil || self.isVersion(ver, newerThan: bestVersion!) {
-                    bestVersion = ver
+                if userInitiated {
+                    self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: ""))
                 }
-            }
-            guard let latestVersion = bestVersion else {
-                // No matching release found – silently ignore for automatic checks
-                if userInitiated { self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: "")) }
                 return
             }
-            self.compareAndNotify(latestVersion: latestVersion, currentVersion: currentVersion, userInitiated: userInitiated)
+            guard let latestVersion = self.findBestRelease(from: releases, withPrefix: prefix) else {
+                // No matching release found – silently ignore for automatic checks
+                if userInitiated {
+                    self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: ""))
+                }
+                return
+            }
+            self.compareAndNotify(
+                latestVersion: latestVersion, currentVersion: currentVersion, userInitiated: userInitiated
+            )
         }
+    }
+
+    // Finds the newest non-prerelease, non-draft release tag starting with the given major prefix.
+    private func findBestRelease(from releases: [[String: Any]], withPrefix prefix: String) -> String? {
+        var bestVersion: String?
+        for release in releases {
+            guard let tag = release["tag_name"] as? String else { continue }
+            let ver = normalizedVersion(tag)
+            guard ver.hasPrefix(prefix + ".") || ver == prefix else { continue }
+            let isDraft = release["draft"] as? Bool ?? false
+            let isPrerelease = release["prerelease"] as? Bool ?? false
+            guard !isDraft && !isPrerelease else { continue }
+            if let best = bestVersion, !isVersion(ver, newerThan: best) { continue }
+            bestVersion = ver
+        }
+        return bestVersion
     }
 
     // Common HTTP GET helper that calls back on the main queue with a parsed JSON dictionary.
@@ -126,25 +141,29 @@ final class GitHubUpdateChecker {
                     }
                     return
                 }
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data)
-                    if let dict = json as? [String: Any] {
-                        completion(dict)
-                    } else if let array = json as? [[String: Any]] {
-                        completion(["_array": array])
-                    } else {
-                        if userInitiated {
-                            self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: ""))
-                        }
-                    }
-                } catch {
-                    if userInitiated {
-                        self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: ""))
-                    }
-                }
+                self.parseJSONResponse(data, userInitiated: userInitiated, completion: completion)
             }
         }
         task.resume()
+    }
+
+    // Parses a JSON response data buffer and calls completion with the resulting dictionary.
+    // Array responses are wrapped under the "_array" key.
+    private func parseJSONResponse(_ data: Data, userInitiated: Bool, completion: ([String: Any]) -> Void) {
+        do {
+            let json = try JSONSerialization.jsonObject(with: data)
+            if let dict = json as? [String: Any] {
+                completion(dict)
+            } else if let array = json as? [[String: Any]] {
+                completion(["_array": array])
+            } else if userInitiated {
+                showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: ""))
+            }
+        } catch {
+            if userInitiated {
+                showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: ""))
+            }
+        }
     }
 
     // MARK: - Version comparison
@@ -159,11 +178,11 @@ final class GitHubUpdateChecker {
         let newParts = newVersion.components(separatedBy: ".").compactMap { Int($0) }
         let curParts = currentVersion.components(separatedBy: ".").compactMap { Int($0) }
         let count = max(newParts.count, curParts.count)
-        for i in 0 ..< count {
-            let n = i < newParts.count ? newParts[i] : 0
-            let c = i < curParts.count ? curParts[i] : 0
-            if n > c { return true }
-            if n < c { return false }
+        for idx in 0 ..< count {
+            let newPart = idx < newParts.count ? newParts[idx] : 0
+            let curPart = idx < curParts.count ? curParts[idx] : 0
+            if newPart > curPart { return true }
+            if newPart < curPart { return false }
         }
         return false
     }
