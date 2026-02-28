@@ -56,8 +56,7 @@ extension URL {
         }
 
         if var names = NSString(bytes: bytes, length: length,
-                                encoding: String.Encoding.utf8.rawValue)?.components(separatedBy: "\0")
-        {
+                                encoding: String.Encoding.utf8.rawValue)?.components(separatedBy: "\0") {
             names.removeLast()
             var attributes: [String: String?] = [:]
             for name in names {

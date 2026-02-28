@@ -44,3 +44,15 @@
 "accept" = "Accept";
 "language_changed_title" = "Language Changed";
 "language_changed_message" = "Please restart the application to apply the new language.";
+
+/* Update Check */
+"Check for Updates…" = "Check for Updates…";
+"UpdateAvailable" = "Update Available";
+"UpdateAvailableInfo" = "Xattr Editor %@ is now available. Would you like to download it?";
+"DownloadUpdate" = "Download Update";
+"UpdateLater" = "Later";
+"UpToDate" = "You're up to date!";
+"UpToDateInfo" = "Xattr Editor %@ is currently the latest version.";
+"UpdateCheckError" = "Update Check Failed";
+"UpdateCheckFailed" = "Failed to retrieve update information.";
+"UpdateCheckNetworkError" = "Unable to connect to the update server. Please check your internet connection.";

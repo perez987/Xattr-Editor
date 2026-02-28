@@ -44,3 +44,16 @@
 "accept" = "Akzeptieren";
 "language_changed_title" = "Sprache geändert";
 "language_changed_message" = "Bitte starten Sie die Anwendung neu, um die neue Sprache anzuwenden.";
+
+/* Update Check */
+/* Update Check */
+"Check for Updates…" = "Nach Updates suchen…";
+"UpdateAvailable" = "Update verfügbar";
+"UpdateAvailableInfo" = "Xattr Editor %@ ist jetzt verfügbar. Möchten Sie es herunterladen?";
+"DownloadUpdate" = "Update herunterladen";
+"UpdateLater" = "Später";
+"UpToDate" = "Sie sind auf dem neuesten Stand!";
+"UpToDateInfo" = "Xattr Editor %@ ist aktuell die neueste Version.";
+"UpdateCheckError" = "Update-Prüfung fehlgeschlagen";
+"UpdateCheckFailed" = "Abrufen der Update-Informationen fehlgeschlagen.";
+"UpdateCheckNetworkError" = "Verbindung zum Update-Server nicht möglich. Bitte überprüfen Sie Ihre Internetverbindung.";

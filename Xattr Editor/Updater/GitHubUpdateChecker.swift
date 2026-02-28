@@ -1,6 +1,6 @@
 //
 //  GitHubUpdateChecker.swift
-//  Download Full Installer
+//  Xattr Editor
 //
 //  Lightweight GitHub Releases update checker (no Sparkle dependency).
 //

@@ -33,7 +33,7 @@ struct LanguageSelectorView: View {
         LanguageItem(code: "en", name: "English", flag: "🇬🇧"),
         LanguageItem(code: "es", name: "Español", flag: "🇪🇸"),
         LanguageItem(code: "fr", name: "Français", flag: "🇫🇷"),
-        LanguageItem(code: "it", name: "Italiano", flag: "🇮🇹"),
+        LanguageItem(code: "it", name: "Italiano", flag: "🇮🇹")
     ]
 
     init() {
