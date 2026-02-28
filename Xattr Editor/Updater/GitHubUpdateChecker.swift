@@ -21,7 +21,7 @@ final class GitHubUpdateChecker {
     // MARK: - Constants
 
     private let owner = "perez987"
-    private let repo = "DownloadFullInstaller"
+    private let repo = "Xattr-editor"
 
     private var releasesAPIURL: String {
         "https://api.github.com/repos/\(owner)/\(repo)/releases"
@@ -37,22 +37,16 @@ final class GitHubUpdateChecker {
 
     // MARK: - Public API
 
-    /// Checks for updates and shows an alert if a newer version is found (or if the user initiated
-    /// the check and is already up to date).
+    // Checks for updates and shows an alert if a newer version is found (or if the user initiated
+    // the check and is already up to date).
     func checkForUpdates(userInitiated: Bool) {
         let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
-        let majorPrefix = currentVersion.prefix(while: { $0.isNumber })
-
-        if majorPrefix == "2" {
-            fetchAllReleasesAndFindLatestWithPrefix("2", currentVersion: currentVersion, userInitiated: userInitiated)
-        } else {
-            fetchLatestRelease(currentVersion: currentVersion, userInitiated: userInitiated)
-        }
+        fetchLatestRelease(currentVersion: currentVersion, userInitiated: userInitiated)
     }
 
     // MARK: - Private helpers
 
-    /// Fetches /releases/latest and compares with the current version.
+    // Fetches /releases/latest and compares with the current version.
     private func fetchLatestRelease(currentVersion: String, userInitiated: Bool) {
         guard let url = URL(string: latestReleaseAPIURL) else { return }
         performRequest(url: url, userInitiated: userInitiated) { [weak self] json in
@@ -64,33 +58,6 @@ final class GitHubUpdateChecker {
                 return
             }
             let latestVersion = self.normalizedVersion(tag)
-            self.compareAndNotify(
-                latestVersion: latestVersion, currentVersion: currentVersion, userInitiated: userInitiated
-            )
-        }
-    }
-
-    // Fetches /releases (all releases) and finds the newest one whose tag starts with the given prefix.
-    private func fetchAllReleasesAndFindLatestWithPrefix(
-        _ prefix: String, currentVersion: String, userInitiated: Bool
-    ) {
-        guard let url = URL(string: releasesAPIURL) else { return }
-        performRequest(url: url, userInitiated: userInitiated) { [weak self] json in
-            guard let self else { return }
-            // The releases endpoint returns an array
-            guard let releases = json["_array"] as? [[String: Any]] else {
-                if userInitiated {
-                    self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: ""))
-                }
-                return
-            }
-            guard let latestVersion = self.findBestRelease(from: releases, withPrefix: prefix) else {
-                // No matching release found – silently ignore for automatic checks
-                if userInitiated {
-                    self.showErrorAlert(NSLocalizedString("UpdateCheckFailed", comment: ""))
-                }
-                return
-            }
             self.compareAndNotify(
                 latestVersion: latestVersion, currentVersion: currentVersion, userInitiated: userInitiated
             )
