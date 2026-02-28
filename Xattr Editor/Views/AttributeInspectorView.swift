@@ -120,13 +120,12 @@ struct AttributeInspectorView: View {
         .alert(
             NSLocalizedString("attribute_removed_title", comment: "Attribute removed title"),
             isPresented: $showingRemoveAlert
-          ) {
-              Button(NSLocalizedString("ok", comment: "Ok button"), role: .cancel) {}
-                  .keyboardShortcut(.defaultAction)
-          } message: {
-              Text(removeMessage)
-          }
-
+        ) {
+            Button(NSLocalizedString("ok", comment: "Ok button"), role: .cancel) {}
+                .keyboardShortcut(.defaultAction)
+        } message: {
+            Text(removeMessage)
+        }
     }
 
     private func refresh() {

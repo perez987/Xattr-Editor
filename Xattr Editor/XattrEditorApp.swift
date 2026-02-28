@@ -26,6 +26,15 @@ struct XattrEditorApp: App {
         .windowResizability(.contentSize)
         .defaultPosition(.center)
         .commands {
+            CommandGroup(after: .appInfo) {
+                // Settings to check for updates
+                Button(NSLocalizedString("Check for Updates…", comment: "Menu item to check for app updates"),
+                       systemImage: "arrow.triangle.2.circlepath")
+                {
+                    GitHubUpdateChecker.shared.checkForUpdates(userInitiated: true)
+                }
+                .keyboardShortcut("u", modifiers: [.command])
+            }
             // Language menu before File menu
             CommandMenu(NSLocalizedString("menu_language", comment: "Language menu")) {
                 Button(NSLocalizedString("menu_select_language", comment: "Select Language menu item")) {

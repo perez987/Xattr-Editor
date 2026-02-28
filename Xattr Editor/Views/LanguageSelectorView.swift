@@ -14,7 +14,7 @@ struct LanguageItem: Identifiable {
     let flag: String
 
     init(code: String, name: String, flag: String) {
-        self.id = code
+        id = code
         self.code = code
         self.name = name
         self.flag = flag
@@ -33,7 +33,7 @@ struct LanguageSelectorView: View {
         LanguageItem(code: "en", name: "English", flag: "🇬🇧"),
         LanguageItem(code: "es", name: "Español", flag: "🇪🇸"),
         LanguageItem(code: "fr", name: "Français", flag: "🇫🇷"),
-        LanguageItem(code: "it", name: "Italiano", flag: "🇮🇹")
+        LanguageItem(code: "it", name: "Italiano", flag: "🇮🇹"),
     ]
 
     init() {

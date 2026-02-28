@@ -11,6 +11,7 @@
 		AA0000011E34BA6100A3E79B /* XattrEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000001E34BA6100A3E79B /* XattrEditorApp.swift */; };
 		AA0000021E34BA6100A3E79B /* OpenFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000011E34BA6100A3E79A /* OpenFileView.swift */; };
 		AA0000031E34BA6100A3E79B /* AttributeInspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000021E34BA6100A3E79A /* AttributeInspectorView.swift */; };
+		C054A5EF2F5371AB00442D6C /* GitHubUpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054A5ED2F5371AB00442D6C /* GitHubUpdateChecker.swift */; };
 		D95039F42F184BAD0086B703 /* Material+LiquidGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95039F32F184BAD0086B703 /* Material+LiquidGlass.swift */; };
 		D96A33FB2F254D1C00964325 /* LanguageSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A33FA2F254D1C00964325 /* LanguageSelectorView.swift */; };
 		FB8A8B0D1E336D0800908B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8A8B0C1E336D0800908B25 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		AA0000001E34BA6100A3E79B /* XattrEditorApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XattrEditorApp.swift; sourceTree = "<group>"; };
 		AA0000011E34BA6100A3E79A /* OpenFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenFileView.swift; sourceTree = "<group>"; };
 		AA0000021E34BA6100A3E79A /* AttributeInspectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeInspectorView.swift; sourceTree = "<group>"; };
+		C054A5ED2F5371AB00442D6C /* GitHubUpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUpdateChecker.swift; sourceTree = "<group>"; };
 		D95039F32F184BAD0086B703 /* Material+LiquidGlass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Material+LiquidGlass.swift"; sourceTree = "<group>"; };
 		D95DB6522F18188400472969 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D96A33FA2F254D1C00964325 /* LanguageSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectorView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		C054A5EE2F5371AB00442D6C /* Updater */ = {
+			isa = PBXGroup;
+			children = (
+				C054A5ED2F5371AB00442D6C /* GitHubUpdateChecker.swift */,
+			);
+			path = Updater;
+			sourceTree = "<group>";
+		};
 		FB8A8AFE1E336D0800908B25 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 				FB8A8B111E336D0800908B25 /* Info.plist */,
 				FBC0D2C41E34BA6100A3E79B /* Model */,
 				C032A5CE2F164C4000EAC461 /* Resources */,
+				C054A5EE2F5371AB00442D6C /* Updater */,
 				FBC0D2D21E34BDB700A3E79B /* Views */,
 				AA0000001E34BA6100A3E79B /* XattrEditorApp.swift */,
 			);
@@ -217,6 +228,7 @@
 				AA0000031E34BA6100A3E79B /* AttributeInspectorView.swift in Sources */,
 				D95039F42F184BAD0086B703 /* Material+LiquidGlass.swift in Sources */,
 				D96A33FB2F254D1C00964325 /* LanguageSelectorView.swift in Sources */,
+				C054A5EF2F5371AB00442D6C /* GitHubUpdateChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
