@@ -34,8 +34,8 @@ Changelog oy my additions:
 - Improve README and documentation
 - Update screenshots
 - Add language support: German, English, Spanish, French and Italian  (default to English)
-- Added language selector
-- Add soft Liquid Glass support.
+- Add language selector
+- Add an updater system (no Sparkle). 
 
 ## SwiftUI Version
 
