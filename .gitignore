@@ -16,3 +16,4 @@ Thumbs.db
 *.ipa
 *.dSYM.zip
 *.dSYM
+/Xattr Editor.xcodeproj/project.xcworkspace/xcuserdata
