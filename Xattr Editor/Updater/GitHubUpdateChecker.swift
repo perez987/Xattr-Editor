@@ -23,9 +23,9 @@ final class GitHubUpdateChecker {
     private let owner = "perez987"
     private let repo = "Xattr-editor"
 
-    private var releasesAPIURL: String {
-        "https://api.github.com/repos/\(owner)/\(repo)/releases"
-    }
+//    private var releasesAPIURL: String {
+//        "https://api.github.com/repos/\(owner)/\(repo)/releases"
+//    }
 
     private var latestReleaseAPIURL: String {
         "https://api.github.com/repos/\(owner)/\(repo)/releases/latest"
