@@ -39,7 +39,7 @@ Changelog oy my additions:
 
 ## SwiftUI Version
 
-Original repo is based on XIB storyboard but it has been migrated to SwiftUI, providing a modern UI framework with Liquid Glass effect support for macOS 15+. The app requires:
+Original repo is based on XIB storyboard but it has been migrated to SwiftUI, providing a modern UI framework. The app requires:
 
 - **Xcode 15** or later
 - **macOS 14.0** or later
