@@ -17,6 +17,7 @@
 		FB8A8B0D1E336D0800908B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8A8B0C1E336D0800908B25 /* Assets.xcassets */; };
 		FBC0D2CC1E34BA6100A3E79B /* URL+XAttr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */; };
 		FBC0D2CD1E34BA6100A3E79B /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0D2C51E34BA6100A3E79B /* Attribute.swift */; };
+		EE0001001E34BA6100A3E79B /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0000001E34BA6100A3E79B /* Document.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FB8A8B111E336D0800908B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBC0D2C31E34BA6100A3E79B /* URL+XAttr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+XAttr.swift"; sourceTree = "<group>"; };
 		FBC0D2C51E34BA6100A3E79B /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		EE0000001E34BA6100A3E79B /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				FBC0D2C51E34BA6100A3E79B /* Attribute.swift */,
+				EE0000001E34BA6100A3E79B /* Document.swift */,
 				D95039F32F184BAD0086B703 /* Material+LiquidGlass.swift */,
 			);
 			path = Model;
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC0D2CD1E34BA6100A3E79B /* Attribute.swift in Sources */,
+				EE0001001E34BA6100A3E79B /* Document.swift in Sources */,
 				FBC0D2CC1E34BA6100A3E79B /* URL+XAttr.swift in Sources */,
 				AA0000011E34BA6100A3E79B /* XattrEditorApp.swift in Sources */,
 				AA0000021E34BA6100A3E79B /* OpenFileView.swift in Sources */,
