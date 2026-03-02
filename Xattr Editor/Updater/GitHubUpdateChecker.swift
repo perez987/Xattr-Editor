@@ -58,8 +58,10 @@ final class GitHubUpdateChecker {
                 return
             }
             let latestVersion = self.normalizedVersion(tag)
+            let releasePageURL = json["html_url"] as? String ?? self.releasesPageURL
             self.compareAndNotify(
-                latestVersion: latestVersion, currentVersion: currentVersion, userInitiated: userInitiated
+                latestVersion: latestVersion, currentVersion: currentVersion,
+                releasePageURL: releasePageURL, userInitiated: userInitiated
             )
         }
     }
@@ -156,15 +158,15 @@ final class GitHubUpdateChecker {
 
     // MARK: - Alert helpers
 
-    private func compareAndNotify(latestVersion: String, currentVersion: String, userInitiated: Bool) {
+    private func compareAndNotify(latestVersion: String, currentVersion: String, releasePageURL: String, userInitiated: Bool) {
         if isVersion(latestVersion, newerThan: currentVersion) {
-            showUpdateAvailableAlert(latestVersion: latestVersion)
+            showUpdateAvailableAlert(latestVersion: latestVersion, releasePageURL: releasePageURL)
         } else if userInitiated {
             showUpToDateAlert(currentVersion: currentVersion)
         }
     }
 
-    private func showUpdateAvailableAlert(latestVersion: String) {
+    private func showUpdateAvailableAlert(latestVersion: String, releasePageURL: String) {
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("UpdateAvailable", comment: "")
         alert.informativeText = String(
@@ -174,7 +176,7 @@ final class GitHubUpdateChecker {
         alert.addButton(withTitle: NSLocalizedString("DownloadUpdate", comment: ""))
         alert.addButton(withTitle: NSLocalizedString("UpdateLater", comment: ""))
         if alert.runModal() == .alertFirstButtonReturn {
-            if let url = URL(string: releasesPageURL) {
+            if let url = URL(string: releasePageURL) {
                 NSWorkspace.shared.open(url)
             }
         }
