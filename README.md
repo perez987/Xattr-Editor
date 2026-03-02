@@ -35,7 +35,7 @@ Changelog oy my additions:
 - Update screenshots
 - Add language support: German, English, Spanish, French and Italian  (default to English)
 - Add language selector
-- Add an updater system (no Sparkle). 
+- Add an updater system (no Sparkle); [more info](DOCS/Updater-system.md).
 
 ## SwiftUI Version
 

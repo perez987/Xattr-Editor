@@ -36,7 +36,7 @@ Registro de cambios realizados en mi repositorio:
 - Añadir el idioma español
 - Añadir soporte para idiomas: Alemán, Inglés, Español, Francés e Italiano  (predeterminado Inglés)
 - Añadir selector de idioma
-- Añadir soporte para Liquid Glass en macOS 15+ manteniendo compatibilidad hacia atrás con macOS 14.
+- Comprobar actualizaciones: utiliza la API GitHub Releases para detectar versiones nuevas de la aplicación. No depende de Sparkle o de otros sistemas de terceras partes. [Más información](DOCS/Updater-system.md).
 
 ## Versión SwiftUI
 
