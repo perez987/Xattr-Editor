@@ -4,10 +4,6 @@
 //
 //  Lightweight GitHub Releases update checker (no Sparkle dependency).
 //
-//  Version routing:
-//   - App version starting with "2" → searches all releases for the latest 2.x.x tag.
-//   - App version starting with "3" or any other prefix → uses the /releases/latest endpoint.
-//
 
 import AppKit
 import Foundation
