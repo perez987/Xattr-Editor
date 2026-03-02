@@ -48,7 +48,7 @@
 /* Update Check */
 "Check for Updates…" = "Buscar actualizaciones…";
 "UpdateAvailable" = "Actualización disponible";
-"UpdateAvailableInfo" = "Xattr Editor %@ ya está disponible. ¿Desea descargarlo?";
+"UpdateAvailableInfo" = "Xattr Editor %@ ya está disponible. ¿Deseas descargarla?";
 "DownloadUpdate" = "Descargar actualización";
 "UpdateLater" = "Más tarde";
 "UpToDate" = "¡Estás al día!";
