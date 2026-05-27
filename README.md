@@ -13,7 +13,7 @@ This project is an expansion of [Xattr-remove](https://github.com/perez987/Xattr
 - **Xattr-remove**
    - Simple and lightweight
    - Focused on a single task (removing `com.apple.quarantine` from files downloaded from the internet)
-   - Minimal user intervention (the app closes automatically 3 seconds after successfully completing the task)
+   - Minimal user intervention (the app closes automatically 5 seconds after successfully completing the task)
 - **Xattr Editor**
    - More complex, although the final size of both applications differs by only 0.5 MB
    - Extended attribute editing functions (view, modify, remove, or add attributes)
