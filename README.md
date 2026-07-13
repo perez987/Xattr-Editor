@@ -4,10 +4,6 @@
 ![Xcode](https://img.shields.io/badge/Xcode-15+-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-5+-lavender.svg)
 
-<a href="README-ES.md">
-    <img src="https://img.shields.io/badge/Spanish-README-blue" alt=“Spanish README”>
-</a><br><br>
-
 This project is an expansion of [Xattr-remove](https://github.com/perez987/Xattr-remove). These are the differences between the two projects:
 
 - **Xattr-remove**
@@ -31,11 +27,11 @@ Changelog oy my additions:
 - Fix error warning in attribute renaming
 - Clear the attribute value field when deleting attributes
 - Re-show drop file window when closing attribute inspector
-- Improve README and documentation
-- Update screenshots
 - Add language support: German, English, Spanish, French and Italian  (default to English)
 - Add language selector
-- Add an updater system (no Sparkle); [more info](DOCS/Updater-system.md).
+- Add an updater system (no Sparkle); [more info](DOCS/Updater-system.md)
+- Improve README and documentation
+- Update screenshots
 
 ## SwiftUI Version
 
@@ -70,9 +66,3 @@ You can also use the File >> Open menu (Cmd + O), which allows you to select a f
 You can add, rename, delete, or modify properties of existing attributes.
 
 When removing an attribute, the user receives feedback.
-
-### Language selector
-
-| Languages list | 
-|:----|
-| ![Languages](Images/Language.png) |
