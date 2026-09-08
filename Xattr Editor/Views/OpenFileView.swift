@@ -18,32 +18,42 @@ struct OpenFileView: View {
             Spacer()
 
             ZStack {
-                // Liquid Glass background layer
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.clear)
-                    .adaptiveMaterialBackground(type: .window)
-
-                RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(
-                        isDragging ? Color.accentColor : Color.gray,
-                        style: StrokeStyle(lineWidth: isDragging ? 4 : 2, dash: [10])
+                RoundedRectangle(cornerRadius: 22)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color.white.opacity(0.26),
+                                Color.modernAccentSoft.opacity(0.12)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
                     )
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(isDragging ? Color.accentColor.opacity(0.1) : Color.clear)
+                    .modernGlassPanel(cornerRadius: 22)
+
+                RoundedRectangle(cornerRadius: 22)
+                    .strokeBorder(
+                        isDragging ? Color.accentColor.opacity(0.95) : Color.white.opacity(0.33),
+                        style: StrokeStyle(lineWidth: isDragging ? 4 : 1.5, dash: [10])
                     )
 
                 VStack(spacing: 20) {
                     Image(systemName: "doc.badge.plus")
                         .font(.system(size: 60))
-                        .foregroundColor(.gray)
+                        .foregroundStyle(
+                            LinearGradient(
+                                colors: [.modernAccentSoft, .accentColor],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
 
                     Text(NSLocalizedString("drop_file_here", comment: "Drop file here message"))
                         .font(.title2)
-                        .foregroundColor(.gray)
+                        .foregroundStyle(.primary)
 
                     Text(NSLocalizedString("or", comment: "Or text"))
-                        .foregroundColor(.gray)
+                        .foregroundStyle(.secondary)
 
                     Button(NSLocalizedString("choose_file", comment: "Choose file button")) {
                         openFileDialog()
@@ -65,6 +75,7 @@ struct OpenFileView: View {
                 appState.windowToOpen = nil
             }
         }
+        .modernWindowBackground()
     }
 
     private func handleDrop(providers: [NSItemProvider]) -> Bool {

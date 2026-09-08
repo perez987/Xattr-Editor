@@ -58,6 +58,7 @@ struct AttributeInspectorView: View {
                 }
                 .padding(6)
                 .adaptiveMaterialBackground(type: .control)
+                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
 
                 Divider()
 
@@ -72,6 +73,7 @@ struct AttributeInspectorView: View {
             }
             .frame(width: 330, height: 380)
             .padding(.leading, 10)
+            .modernGlassPanel(cornerRadius: 16)
 
             Divider()
 
@@ -92,8 +94,10 @@ struct AttributeInspectorView: View {
                 }
             }
             .frame(width: 340, height: 389)
+            .modernGlassPanel(cornerRadius: 16)
         }
         .frame(width: 690, height: 400)
+        .padding(8)
         .navigationTitle(fileURL.lastPathComponent)
         .onAppear(perform: refresh)
         .onChange(of: selectedAttribute) { _, newValue in
@@ -126,6 +130,7 @@ struct AttributeInspectorView: View {
         } message: {
             Text(removeMessage)
         }
+        .modernWindowBackground()
     }
 
     private func refresh() {
@@ -221,10 +226,14 @@ struct TextEditorWithLineNumbers: View {
 
     var body: some View {
         TextEditor(text: $text)
-//            .font(.system(size: NSFont.systemFontSize, design: .monospaced))
             .font(.system(.body))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(4)
+            .padding(8)
+            .background(
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .fill(Color.white.opacity(0.2))
+            )
+            .padding(8)
     }
 }
 

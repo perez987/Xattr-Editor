@@ -63,7 +63,15 @@ struct LanguageSelectorView: View {
                 .padding(.vertical, 4)
             }
             .frame(height: 212)
-            .border(Color.gray.opacity(0.3), width: 1)
+            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .stroke(Color.white.opacity(0.4), lineWidth: 1)
+            )
+            .background(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(Color.white.opacity(0.12))
+            )
 
             HStack(spacing: 12) {
                 Button(NSLocalizedString("cancel", comment: "Cancel button")) {
@@ -86,6 +94,7 @@ struct LanguageSelectorView: View {
         }
         .padding()
         .frame(width: 280)
+        .modernGlassPanel(cornerRadius: 18)
         .alert(
             NSLocalizedString("language_changed_title", comment: "Language changed alert title"),
             isPresented: $showRestartAlert
@@ -96,6 +105,7 @@ struct LanguageSelectorView: View {
         } message: {
             Text(NSLocalizedString("language_changed_message", comment: "Language changed message"))
         }
+        .modernWindowBackground()
     }
 
     private func saveLanguagePreference() {

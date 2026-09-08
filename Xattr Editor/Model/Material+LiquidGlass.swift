@@ -20,6 +20,14 @@ extension Material {
     }
 }
 
+// MARK: - Modern Color Theme
+
+extension Color {
+    static let modernSurfaceTop = Color(red: 0.83, green: 0.90, blue: 1.0)
+    static let modernSurfaceBottom = Color(red: 0.94, green: 0.95, blue: 1.0)
+    static let modernAccentSoft = Color(red: 0.57, green: 0.69, blue: 0.98)
+}
+
 // MARK: - View Modifiers
 
 /// Adaptive material background that applies Liquid Glass on macOS 15+
@@ -60,6 +68,42 @@ struct WindowLiquidGlassEffect: ViewModifier {
     }
 }
 
+/// Glass-like rounded panel with soft stroke and shadow
+struct ModernGlassPanel: ViewModifier {
+    let cornerRadius: CGFloat
+
+    func body(content: Content) -> some View {
+        content
+            .adaptiveMaterialBackground(type: .control)
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .stroke(
+                        LinearGradient(
+                            colors: [.white.opacity(0.48), .white.opacity(0.12)],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        ),
+                        lineWidth: 1
+                    )
+            )
+            .shadow(color: .black.opacity(0.11), radius: 22, x: 0, y: 8)
+    }
+}
+
+/// Soft gradient for window background
+struct ModernWindowBackground: ViewModifier {
+    func body(content: Content) -> some View {
+        content.background(
+            LinearGradient(
+                colors: [.modernSurfaceTop, .modernSurfaceBottom],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+    }
+}
+
 // MARK: - View Extensions
 
 extension View {
@@ -71,5 +115,15 @@ extension View {
     /// Applies window-level Liquid Glass effect on macOS 15+
     func windowLiquidGlass() -> some View {
         modifier(WindowLiquidGlassEffect())
+    }
+
+    /// Applies a modern glass panel style
+    func modernGlassPanel(cornerRadius: CGFloat = 18) -> some View {
+        modifier(ModernGlassPanel(cornerRadius: cornerRadius))
+    }
+
+    /// Applies a soft gradient window background
+    func modernWindowBackground() -> some View {
+        modifier(ModernWindowBackground())
     }
 }
