@@ -28,10 +28,15 @@ Changelog oy my additions:
 - Clear the attribute value field when deleting attributes
 - Re-show drop file window when closing attribute inspector
 - Add language support: German, English, Spanish, French and Italian  (default to English)
-- Add language selector
+   - Add language selector
 - Add an updater system (no Sparkle); [more info](DOCS/Updater-system.md)
 - Improve README and documentation
 - Update screenshots
+- Refresh UI:
+   - Introduce a new modern glass/gradient visual style across the main SwiftUI views
+   - Improve dark mode styling in UI.
+
+
 
 ## SwiftUI Version
 
