@@ -23,6 +23,7 @@ struct LanguageItem: Identifiable {
 
 struct LanguageSelectorView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) private var colorScheme
     @State private var selectedLanguage: String
     @State private var showRestartAlert = false
     private let initialLanguage: String
@@ -50,6 +51,7 @@ struct LanguageSelectorView: View {
         VStack(spacing: 20) {
             Text(NSLocalizedString("language_selector_title", comment: "Language selector title"))
                 .font(.title2)
+                .foregroundStyle(.primary)
                 .padding(.top)
 
             List(languages, selection: $selectedLanguage) { language in
@@ -66,11 +68,11 @@ struct LanguageSelectorView: View {
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .stroke(Color.white.opacity(0.4), lineWidth: 1)
+                    .stroke(colorScheme == .dark ? Color.white.opacity(0.22) : Color.white.opacity(0.4), lineWidth: 1)
             )
             .background(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .fill(Color.white.opacity(0.12))
+                    .fill(colorScheme == .dark ? Color.black.opacity(0.28) : Color.white.opacity(0.12))
             )
 
             HStack(spacing: 12) {

@@ -23,8 +23,8 @@ extension Material {
 // MARK: - Modern Color Theme
 
 extension Color {
-    static let modernSurfaceTop = Color(red: 0.83, green: 0.90, blue: 1.0)
-    static let modernSurfaceBottom = Color(red: 0.94, green: 0.95, blue: 1.0)
+    static let modernSurfaceTop = Color(nsColor: .windowBackgroundColor)
+    static let modernSurfaceBottom = Color(nsColor: .underPageBackgroundColor)
     static let modernAccentSoft = Color(red: 0.57, green: 0.69, blue: 0.98)
 }
 

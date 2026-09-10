@@ -11,6 +11,7 @@ import UniformTypeIdentifiers
 struct OpenFileView: View {
     @EnvironmentObject var appState: AppState
     @Environment(\.openWindow) private var openWindow
+    @Environment(\.colorScheme) private var colorScheme
     @State private var isDragging = false
 
     var body: some View {
@@ -22,8 +23,10 @@ struct OpenFileView: View {
                     .fill(
                         LinearGradient(
                             colors: [
-                                Color.white.opacity(0.26),
-                                Color.modernAccentSoft.opacity(0.12)
+                                colorScheme == .dark ? Color.black.opacity(0.35) : Color.white.opacity(0.26),
+                                colorScheme == .dark
+                                    ? Color.modernAccentSoft.opacity(0.16)
+                                    : Color.modernAccentSoft.opacity(0.30)
                             ],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
@@ -33,8 +36,10 @@ struct OpenFileView: View {
 
                 RoundedRectangle(cornerRadius: 22)
                     .strokeBorder(
-                        isDragging ? Color.accentColor.opacity(0.95) : Color.white.opacity(0.33),
-                        style: StrokeStyle(lineWidth: isDragging ? 4 : 1.5, dash: [10])
+                        isDragging
+                            ? Color.accentColor.opacity(0.95)
+                            : (colorScheme == .dark ? Color.blue.opacity(0.05) : Color.blue.opacity(0.33)),
+                        style: StrokeStyle(lineWidth: isDragging ? 4 : 2, dash: [10])
                     )
 
                 VStack(spacing: 20) {
