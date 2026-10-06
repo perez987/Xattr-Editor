@@ -26,7 +26,7 @@ struct OpenFileView: View {
                                 colorScheme == .dark ? Color.black.opacity(0.35) : Color.white.opacity(0.26),
                                 colorScheme == .dark
                                     ? Color.modernAccentSoft.opacity(0.16)
-                                    : Color.modernAccentSoft.opacity(0.30)
+                                    : Color.modernAccentSoft.opacity(0.30),
                             ],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing

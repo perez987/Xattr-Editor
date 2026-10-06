@@ -10,8 +10,8 @@ import SwiftUI
 
 // MARK: - Liquid Glass Material
 
-/// Liquid Glass effect - translucent material with enhanced blur
-/// Available on macOS 15.0 (Sequoia) and later, including macOS 26 (Tahoe)
+// Liquid Glass effect - translucent material with enhanced blur
+// Available on macOS 15.0 (Sequoia) and later, including macOS 26 (Tahoe)
 
 @available(macOS 15.0, *)
 extension Material {

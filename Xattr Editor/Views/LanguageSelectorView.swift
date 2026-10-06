@@ -28,13 +28,13 @@ struct LanguageSelectorView: View {
     @State private var showRestartAlert = false
     private let initialLanguage: String
 
-    // Available languages sorted by code
+    /// Available languages sorted by code
     private let languages: [LanguageItem] = [
         LanguageItem(code: "de", name: "Deutsch", flag: "🇩🇪"),
         LanguageItem(code: "en", name: "English", flag: "🇬🇧"),
         LanguageItem(code: "es", name: "Español", flag: "🇪🇸"),
         LanguageItem(code: "fr", name: "Français", flag: "🇫🇷"),
-        LanguageItem(code: "it", name: "Italiano", flag: "🇮🇹")
+        LanguageItem(code: "it", name: "Italiano", flag: "🇮🇹"),
     ]
 
     init() {

@@ -29,7 +29,8 @@ struct XattrEditorApp: App {
             CommandGroup(after: .appInfo) {
                 // Settings to check for updates
                 Button(NSLocalizedString("Check for Updates…", comment: "Menu item to check for app updates"),
-                       systemImage: "arrow.triangle.2.circlepath") {
+                       systemImage: "arrow.triangle.2.circlepath")
+                {
                     GitHubUpdateChecker.shared.checkForUpdates(userInitiated: true)
                 }
                 .keyboardShortcut("u", modifiers: [.command])
@@ -93,7 +94,7 @@ struct InspectorWindowData: Identifiable, Hashable, Encodable, Decodable {
         self.fileURL = fileURL
     }
 
-    // Custom Codable implementation to handle URL
+    /// Custom Codable implementation to handle URL
     enum CodingKeys: String, CodingKey {
         case id
         case filePath
